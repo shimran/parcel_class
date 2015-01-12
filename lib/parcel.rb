@@ -13,13 +13,15 @@ class Parcel
 
   define_method(:cost_to_ship) do
     min_charge=8 #Min charge for first ten pounds
-    ship_cost= @weight
+    volume_cost = @length*@width*@height*0.1
 
-    if ship_cost <= 5
-      min_charge
+    if @weight <= 5
+      total = min_charge
     else
-      ship_cost
+      total = @weight*volume_cost
     end
+
+
 
   end
 

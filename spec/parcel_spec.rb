@@ -12,7 +12,7 @@ require('pry')
 
     it("returns a calculated shipping cost based on the weight parameter") do
       test_parcel = Parcel.new(5, 6, 5, 11)
-      expect(test_parcel.cost_to_ship()).to(eq(11))
+      expect(test_parcel.cost_to_ship()).to(eq(165))
     end
   end
 
