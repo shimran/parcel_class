@@ -13,7 +13,7 @@ get('/shipping') do
   height = params.fetch('height')
   weight = params.fetch('weight')
 
-  @user_input = Parcel.new(length, width, height, weight)
+  @user_input = Parcel.new(length.to_i, width.to_i, height.to_i, weight.to_i)
   @result = @user_input.cost_to_ship()
   erb(:shipping)
 end
